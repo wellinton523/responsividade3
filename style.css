@@ -1,0 +1,97 @@
+body {
+	display: flex;
+	height: 100vh;
+	flex-wrap: wrap;
+	background-color: rgb(58, 58, 58);
+}
+
+div {
+	display: flex;
+	margin: auto;
+	height: 13em;
+	width: 13em;
+	justify-content: center;
+}
+
+.div1 {
+	order: 2;
+	background-color: red;
+}
+
+.div2 {
+	order: 1;
+	background-color: purple;
+}
+
+.div3 {
+	background-color: gray;
+}
+
+.div1::after {
+	content: "Primeiro Quadrado, Cor: Vermelho";
+}
+
+.div2::after {
+	content: "Segundo Quadrado, Cor: Roxo";
+}
+
+.div3::after {
+	content: "Terceiro Quadrado, Cor: Cinza";
+}
+
+@media (max-width: 624px) {
+	.div1 {
+		order: 1;
+		background-color: yellow;
+	}
+
+	.div2 {
+		order: 0;
+		background-color: green;
+	}
+
+	.div3 {
+		background-color: rgb(255, 255, 255);
+	}
+
+	.div1::after {
+		content: "Primeiro Quadrado, Cor: Amarilho";
+	}
+
+	.div2::after {
+		content: "Segundo Quadrado, Cor: Vierde";
+	}
+
+	.div3::after {
+		content: "Terceiro Quadrado, Cor: Branco";
+	}
+}
+
+@media (max-width: 415px) {
+	.div1 {
+		order: 0;
+		background-color: blue;
+	}
+
+	.div2 {
+		background-color: orange;
+	}
+
+	.div3 {
+		background-color: black;
+		order: 2;
+		color: white;
+	}
+
+	.div1::after {
+		content: "Primeiro Quadrado, Cor: Azul";
+	}
+
+	.div2::after {
+		content: "Segundo Quadrado, Cor: Laranja";
+	}
+
+	.div3::after {
+		content: "Terceiro Quadrado, Cor: Preto";
+	}
+}
