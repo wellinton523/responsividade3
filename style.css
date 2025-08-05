@@ -52,6 +52,7 @@ div {
 
 	.div3 {
 		background-color: rgb(255, 255, 255);
+		order: 2;
 	}
 
 	.div1::after {
